@@ -1,0 +1,12 @@
+[USER]
+ID = ''
+XS = ''
+
+[CONTENT]
+CONVERSATION = ''
+MESSAGE = 'hello'
+
+[AT]
+HOUR = 12
+MINUTE = 45
+SECOND = 0
