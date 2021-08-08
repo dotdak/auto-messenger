@@ -1,6 +1,10 @@
 [USER]
-ID = ''
-XS = ''
+presence = ''
+c_user = ''
+xs = ''
+datr = ''
+dpr = 0
+sb = ''
 
 [CONTENT]
 CONVERSATION = ''

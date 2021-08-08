@@ -15,8 +15,12 @@ if __name__ == '__main__':
         print(e)
         sys.exit(0)
     USER = conf['USER']
-    USER_ID = USER['ID']
-    XS = USER['XS']
+    c_user = USER['c_user']
+    xs = USER['xs']
+    presence = USER['presence']
+    datr = USER['datr']
+    dpr = USER['dpr']
+    sb = USER['sb']
     CONTENT = conf['CONTENT']
     MESSAGE = CONTENT['MESSAGE']
     CONVERSATION = CONTENT['CONVERSATION']
@@ -28,8 +32,12 @@ if __name__ == '__main__':
     options.headless = True
     driver = webdriver.Chrome(options=options)
     driver.get(f"https://www.messenger.com")
-    driver.add_cookie({'name': 'c_user', 'value': USER_ID, 'domain': '.messenger.com'})
-    driver.add_cookie({'name': 'xs', 'value': XS, 'domain': '.messenger.com'})
+    driver.add_cookie({'name': 'c_user', 'value': c_user, 'domain': '.messenger.com'})
+    driver.add_cookie({'name': 'xs', 'value': xs, 'domain': '.messenger.com'})
+    driver.add_cookie({'name': 'presence', 'value': presence, 'domain': '.messenger.com'})
+    driver.add_cookie({'name': 'datr', 'value': datr, 'domain': '.messenger.com'})
+    driver.add_cookie({'name': 'dpr', 'value': dpr, 'domain': '.messenger.com'})
+    driver.add_cookie({'name': 'sb', 'value': sb, 'domain': '.messenger.com'})
     driver.get(f"https://www.messenger.com/t/{CONVERSATION}")
     driver.implicitly_wait(5)
     while True:
